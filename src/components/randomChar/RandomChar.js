@@ -3,6 +3,7 @@ import './randomChar.scss';
 import useMarvelService from '../../services/MarvelService';
 import mjolnir from '../../resources/img/mjolnir.png';
 import setContent from '../../utils/setContent';
+import { Link } from 'react-router-dom';
 
 const RandomChar = () => {
 
@@ -25,7 +26,8 @@ const RandomChar = () => {
         const id = Math.floor(Math.random() * (1011400 - 1011000) + (1011000));
         getCharacter(id)
             .then(onCharLoaded)
-            .then(() => setProcess('confirmed'));
+            .then(() => setProcess('confirmed'))
+            .catch(() => setProcess('error'));
     }
 
     return (
@@ -49,7 +51,7 @@ const RandomChar = () => {
 }
 
 const View = ({data}) => {
-    const {description, name, thumbnail, homepage, wiki} = data;
+    const {id, description, name, thumbnail, wiki} = data;
     return (
         <div className="randomchar__block">
             <img src={thumbnail} 
@@ -62,9 +64,9 @@ const View = ({data}) => {
                     {description}
                 </p>
                 <div className="randomchar__btns">
-                    <a href={homepage} className="button button__main">
+                    <Link to={`/characters/${id}`} className="button button__main">
                         <div className="inner">homepage</div>
-                    </a>
+                    </Link>
                     <a href={wiki} className="button button__secondary">
                         <div className="inner">Wiki</div>
                     </a>

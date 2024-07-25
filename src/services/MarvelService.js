@@ -12,7 +12,10 @@ const useMarvelService = () => {
     }
 
     const getCharacter = async (id) => {
-        const res = await request(`${_apiBase}characters/${id}?${_apiKey}`)
+        const res = await request(`${_apiBase}characters/${id}?${_apiKey}`);
+        if (!res) {
+            throw new Error();
+        }
         return _transformCharacter(res.data.results[0]);
     }
 
@@ -24,7 +27,7 @@ const useMarvelService = () => {
             homepage: res.urls[0].url,
             wiki: res.urls[1].url,
             id: res.id,
-            comics: res.comics.items.length === 0 ? "There is no comics with this character" : res.comics.items.slice(0,10)
+            comics: res.comics.items.length === 0 ? "There is no comics with this character" : res.comics.items.slice(0,10),
         }
     }
 

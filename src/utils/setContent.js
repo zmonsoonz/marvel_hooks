@@ -14,7 +14,7 @@ const setContent = (process, Component, data) => {
         case 'confirmed':
             return <Component data={data}/>
         case 'error':
-            return <h1 className="spinner">There is no such character</h1>
+            return <h1 className="spinner">No character found<br/>Try again</h1>
         default:
             throw new Error('Unexpected process')
     }

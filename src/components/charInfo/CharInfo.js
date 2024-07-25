@@ -3,6 +3,7 @@ import './charInfo.scss';
 import PropTypes from 'prop-types';
 import useMarvelService from '../../services/MarvelService';
 import setContent from '../../utils/setContent';
+import { Link } from 'react-router-dom';
 
 const CharInfo = (props) => {
     
@@ -40,7 +41,7 @@ const CharInfo = (props) => {
 }
 
 const View = ({data}) => {
-    const {name, thumbnail, homepage, wiki, description, comics, id} = data;
+    const {name, thumbnail, wiki, description, comics, id} = data;
     return (
         <div key={id}>
             <div className="char__basics">
@@ -51,9 +52,9 @@ const View = ({data}) => {
                 <div>
                     <div className="char__info-name">{name}</div>
                     <div className="char__btns">
-                        <a href={homepage} className="button button__main">
+                        <Link to={`/characters/${id}`} className="button button__main">
                             <div className="inner">homepage</div>
-                        </a>
+                        </Link>
                         <a href={wiki} className="button button__secondary">
                             <div className="inner">Wiki</div>
                         </a>
@@ -68,11 +69,12 @@ const View = ({data}) => {
             {
                 typeof comics === "string" ? 
                 comics : 
-                comics.map((item,i) => {
+                comics.map((item, i) => {
+                    const id = item.resourceURI.split('/').pop();
                     return (
-                        <li><a key = {i} href={item.resourceURI} className="char__comics-item">
+                        <li key = {i}><Link to={`/comics/${id}`} className="char__comics-item">
                             {item.name}
-                        </a></li>
+                        </Link></li>
                     )
                 })
             }

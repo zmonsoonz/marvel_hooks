@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import './singleComic.scss';
+import { Link } from "react-router-dom";
 const Char = ({data}) => {
     const {name, thumbnail, description} = data;
     return (
@@ -16,6 +17,7 @@ const Char = ({data}) => {
                 <h2 className="single-comic__name">{name}</h2>
                 <p className="single-comic__descr">{description}</p>
             </div>
+            <Link to="/" className="single-comic__back">Back to main</Link>
         </>
     )
 }
