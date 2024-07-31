@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "./static/css/main.076da948.css",
-    "main.js": "./static/js/main.1e9ca8d3.js",
+    "main.js": "./static/js/main.1a1a628a.js",
     "static/js/862.0a4e758c.chunk.js": "./static/js/862.0a4e758c.chunk.js",
     "static/css/175.b64e98bf.chunk.css": "./static/css/175.b64e98bf.chunk.css",
     "static/js/175.4e9d0319.chunk.js": "./static/js/175.4e9d0319.chunk.js",
     "static/css/136.b0601703.chunk.css": "./static/css/136.b0601703.chunk.css",
-    "static/js/136.508c6cee.chunk.js": "./static/js/136.508c6cee.chunk.js",
+    "static/js/136.5ca71a96.chunk.js": "./static/js/136.5ca71a96.chunk.js",
     "static/css/304.eac22b4f.chunk.css": "./static/css/304.eac22b4f.chunk.css",
     "static/js/304.0bd0c521.chunk.js": "./static/js/304.0bd0c521.chunk.js",
     "static/js/397.67e96a04.chunk.js": "./static/js/397.67e96a04.chunk.js",
@@ -18,12 +18,12 @@
     "static/media/Avengers_logo.png": "./static/media/Avengers_logo.9eaf219344d83362e830.png",
     "index.html": "./index.html",
     "main.076da948.css.map": "./static/css/main.076da948.css.map",
-    "main.1e9ca8d3.js.map": "./static/js/main.1e9ca8d3.js.map",
+    "main.1a1a628a.js.map": "./static/js/main.1a1a628a.js.map",
     "862.0a4e758c.chunk.js.map": "./static/js/862.0a4e758c.chunk.js.map",
     "175.b64e98bf.chunk.css.map": "./static/css/175.b64e98bf.chunk.css.map",
     "175.4e9d0319.chunk.js.map": "./static/js/175.4e9d0319.chunk.js.map",
     "136.b0601703.chunk.css.map": "./static/css/136.b0601703.chunk.css.map",
-    "136.508c6cee.chunk.js.map": "./static/js/136.508c6cee.chunk.js.map",
+    "136.5ca71a96.chunk.js.map": "./static/js/136.5ca71a96.chunk.js.map",
     "304.eac22b4f.chunk.css.map": "./static/css/304.eac22b4f.chunk.css.map",
     "304.0bd0c521.chunk.js.map": "./static/js/304.0bd0c521.chunk.js.map",
     "397.67e96a04.chunk.js.map": "./static/js/397.67e96a04.chunk.js.map",
@@ -31,6 +31,6 @@
   },
   "entrypoints": [
     "static/css/main.076da948.css",
-    "static/js/main.1e9ca8d3.js"
+    "static/js/main.1a1a628a.js"
   ]
 }
